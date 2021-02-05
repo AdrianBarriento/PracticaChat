@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
@@ -24,5 +25,17 @@
             <Font size="24.0" />
          </font>
       </Label>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnLogin" layoutX="175.0" layoutY="160.0" mnemonicParsing="false" text="OK" />
+      <TextField fx:id="txtUsername" layoutX="117.0" layoutY="88.0" />
+      <Text layoutX="157.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USRENAME: " />
+
    </children>
 </AnchorPane>
