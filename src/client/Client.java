@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-    public static void main(String[] args) {
+    public void conectarse(){
         try {
             String eco, cadena="";
             Socket cl = new Socket("10.10.200.208", 1234);

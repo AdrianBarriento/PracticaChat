@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="600.0" visible="false">
+   <AnchorPane fx:id="id_panelChat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="600.0" visible="false">
       <children>
          <TextField fx:id="id_txtMensaje" layoutX="31.0" layoutY="456.0" prefHeight="25.0" prefWidth="369.0" promptText="Escriba un mensaje..." />
          <Button fx:id="id_btnEnviar" layoutX="484.0" layoutY="456.0" mnemonicParsing="false" text="Enviar" />
@@ -29,9 +29,9 @@
    </AnchorPane>
 
 
-   <AnchorPane layoutX="103.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <AnchorPane fx:id="id_panelLogin" layoutX="103.0" layoutY="151.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
       <children>
-         <Button fx:id="btnLogin" layoutX="175.0" layoutY="160.0" mnemonicParsing="false" text="OK" />
+         <Button fx:id="btnLogin" layoutX="174.0" layoutY="127.0" mnemonicParsing="false" text="OK" />
          <TextField fx:id="txtUsername" layoutX="117.0" layoutY="88.0" />
          <Text layoutX="157.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USERNAME: " textAlignment="CENTER" />
 

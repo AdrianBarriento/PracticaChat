@@ -8,7 +8,6 @@ public class Server {
     public static void main(String[] args) {
         try {
             ServerSocket servidor = new ServerSocket(1234);
-
             while (true){
                 Socket cliente = servidor.accept();
                 new ServerThread(servidor, cliente).start();
