@@ -16,7 +16,7 @@
          <Button fx:id="btnEnviar" layoutX="484.0" layoutY="456.0" mnemonicParsing="false" text="Enviar" />
          <Separator layoutX="12.0" layoutY="418.0" prefHeight="25.0" prefWidth="577.0" />
          <Separator layoutX="410.0" layoutY="59.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="26.0" />
-         <TextArea layoutX="33.0" layoutY="51.0" prefHeight="359.0" prefWidth="369.0" style="-fx-background-color: #CCCCFF;" />
+         <TextArea fx:id="idChat" layoutX="33.0" layoutY="51.0" prefHeight="359.0" prefWidth="369.0" style="-fx-background-color: #CCCCFF;" />
          <TextArea layoutX="448.0" layoutY="51.0" prefHeight="124.0" prefWidth="124.0" style="-fx-background-color: #CCCCFF;" />
          <TextArea layoutX="448.0" layoutY="286.0" prefHeight="124.0" prefWidth="124.0" style="-fx-background-color: #CCCCFF;" />
          <Separator layoutX="445.0" layoutY="228.0" prefHeight="12.0" prefWidth="124.0" />
