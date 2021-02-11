@@ -14,6 +14,9 @@ public class Client {
     private Socket cl;
     private String message ="";
     private String eco;
+
+
+
     private String username;
 
     public Client(String username){
@@ -25,7 +28,7 @@ public class Client {
         }
     }
 
-    public void sendMessage(TextField txtMessage, Button btnSend){
+    public String sendMessage(TextField txtMessage, Button btnSend){
         try {
             PrintWriter canalsalida = new PrintWriter(cl.getOutputStream(), true);
             BufferedReader canalentrada = new BufferedReader(new InputStreamReader(cl.getInputStream()));
@@ -34,8 +37,14 @@ public class Client {
             canalsalida.println(message);
             eco = canalentrada.readLine();
             System.out.println(eco);
+            txtMessage.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return message;
+    }
+
+    public String getUsername() {
+        return username;
     }
 }

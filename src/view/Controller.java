@@ -31,5 +31,6 @@ public class Controller {
 
     public void sendMessage(){
         client.sendMessage(txtInput, btnSend);
+        System.out.println(client.);
     }
 }
