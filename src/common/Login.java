@@ -11,7 +11,7 @@ public class Login {
         String user = txtUsername.getText();
         Client client = new Client();
 
-        client.conectarse();
+        //client.conectarse();
 
         idLogin.setVisible(false);
         idChat.setVisible(true);
