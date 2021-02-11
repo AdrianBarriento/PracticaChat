@@ -10,7 +10,7 @@ public class Client {
     public static void main(String[] args) {
         try {
             String eco, cadena="";
-            Socket cl = new Socket("192.168.237.65", 8080);
+            Socket cl = new Socket("10.10.200.208", 1234);
 
             PrintWriter canalsalida = new PrintWriter(cl.getOutputStream(), true);
             BufferedReader canalentrada = new BufferedReader(new InputStreamReader(cl.getInputStream()));
