@@ -13,7 +13,7 @@
    <AnchorPane fx:id="paneChat" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="600.0" visible="false">
       <children>
          <TextField fx:id="txtInput" layoutX="52.0" layoutY="456.0" prefHeight="25.0" prefWidth="379.0" />
-         <Button fx:id="btnSend" layoutX="484.0" layoutY="456.0" mnemonicParsing="false" text="Button" />
+         <Button fx:id="btnSend" layoutX="484.0" layoutY="456.0" mnemonicParsing="false" text="Button" onMouseClicked="#sendMessage"/>
          <Separator layoutX="12.0" layoutY="418.0" prefHeight="25.0" prefWidth="577.0" />
 
          <Separator layoutX="428.0" layoutY="59.0" orientation="VERTICAL" prefHeight="359.0" prefWidth="12.0" />

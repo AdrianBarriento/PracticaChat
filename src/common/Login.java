@@ -7,15 +7,13 @@ import javafx.scene.layout.AnchorPane;
 
 
 public class Login {
-    public String login(AnchorPane idLogin, AnchorPane idChat, TextField txtUsername){
+    public Client login(AnchorPane idLogin, AnchorPane idChat, TextField txtUsername){
         String user = txtUsername.getText();
-        Client client = new Client();
-
-        //client.conectarse();
+        Client client = new Client(user);
 
         idLogin.setVisible(false);
         idChat.setVisible(true);
 
-        return user;
+        return client;
     }
 }
