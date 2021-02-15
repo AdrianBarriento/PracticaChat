@@ -1,5 +1,7 @@
 package view;
 
+import client.Client;
+import common.Chat;
 import common.Login;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -22,8 +24,18 @@ public class Controller {
     public Button btnSend;
     public TextArea areaChat;
 
+    private Client client;
+    private Chat chat = new Chat(areaChat);
 
     public void login(MouseEvent mouseEvent){
-        new Login().login(paneLogin, paneChat, txtUsername);
+        client = new Login().login(paneLogin, paneChat, txtUsername);
+        chat.start();
+    }
+
+    public void sendMessage(){
+        String message = client.sendMessage(txtInput, areaChat);
+        areaChat.appendText(message + "\n");
+        System.out.println(client.getUsername());
+
     }
 }
