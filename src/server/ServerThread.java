@@ -23,17 +23,17 @@ public class ServerThread extends Thread{
     @Override
     public void run() {
         try {
-            Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "Se ha conectado "+ client.getUsername());
-            BufferedReader canalentrada = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-            PrintWriter canalsalida = new PrintWriter(clientSocket.getOutputStream(), true);
+            while(true){
+                String cadena = "";
+                //Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "Se ha conectado "+ client.getUsername());
+                BufferedReader canalentrada = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                PrintWriter canalsalida = new PrintWriter(clientSocket.getOutputStream(), true);
 
-            String cadena = canalentrada.readLine();
-            canalsalida.println(cadena);
-            Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "se ha recibido " + cadena);
+                cadena = canalentrada.readLine();
+                canalsalida.println(cadena);
+                Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "se ha recibido " + cadena);
 
-            canalsalida.close();
-            canalentrada.close();
-            clientSocket.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
