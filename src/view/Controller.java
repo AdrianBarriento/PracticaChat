@@ -23,7 +23,7 @@ public class Controller {
     public Button btnSend;
     public TextArea areaChat;
 
-    private Client client;
+    private Client client = new Client();
 
     public void login(MouseEvent mouseEvent){
         client = new Login().login(paneLogin, paneChat, txtUsername);
@@ -31,6 +31,7 @@ public class Controller {
 
     public void sendMessage(){
         client.sendMessage(txtInput, btnSend);
-        System.out.println(client.);
+        System.out.println(client.getUsername());
+
     }
 }

@@ -14,14 +14,16 @@ public class Client {
     private Socket cl;
     private String message ="";
     private String eco;
-
+    public static final String IP_JUANXXIII = "10.10.200.208";
 
 
     private String username;
 
+    public Client(){};
+
     public Client(String username){
         try {
-            cl = new Socket("10.10.200.208", 1234);
+            cl = new Socket("localhost", 1234);
             this.username = username;
         } catch (IOException e) {
             e.printStackTrace();
