@@ -22,10 +22,11 @@ public class ServerThread extends Thread{
     }
     @Override
     public void run() {
+
         try {
-            while(true){
+            while(!clientSocket.isClosed()) {
                 String cadena = "";
-                //Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "Se ha conectado "+ client.getUsername());
+
                 BufferedReader canalentrada = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 PrintWriter canalsalida = new PrintWriter(clientSocket.getOutputStream(), true);
 
@@ -37,6 +38,5 @@ public class ServerThread extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
