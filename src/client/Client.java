@@ -18,7 +18,7 @@ public class Client {
     private String message ="";
     private String eco;
     private PrintWriter canalsalida;
-    private BufferedReader canalentrada;
+    public BufferedReader canalentrada;
     private String username;
 
     public Client(){};
@@ -37,7 +37,11 @@ public class Client {
 
     }
 
+<<<<<<< Updated upstream
     public String sendMessage(TextField txtMessage, TextArea textArea){
+=======
+    public String sendMessage(TextField txtMessage){
+>>>>>>> Stashed changes
         try {
             message = txtMessage.getText();
             System.out.println("mensaje aun sin enviar:  "+message);

@@ -1,6 +1,12 @@
 package server;
 
+<<<<<<< Updated upstream
 import com.mysql.cj.log.Log;
+=======
+import client.Client;
+import javafx.scene.control.TextArea;
+
+>>>>>>> Stashed changes
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,9 +32,16 @@ public class ServerThread extends Thread{
             BufferedReader canalentrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
             PrintWriter canalsalida = new PrintWriter(cliente.getOutputStream(), true);
 
+<<<<<<< Updated upstream
             String cadena = canalentrada.readLine();
             canalsalida.println(cadena.toUpperCase());
             Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "se ha recibido " + cadena);
+=======
+                cadena = canalentrada.readLine();
+                canalsalida.println(cadena);
+
+                Logger.getLogger(ServerThread.class.getName()).log(Level.INFO, "se ha recibido " + cadena);
+>>>>>>> Stashed changes
 
             canalsalida.close();
             canalentrada.close();

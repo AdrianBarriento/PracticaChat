@@ -23,19 +23,32 @@ public class Controller {
     public TextField txtInput;
     public Button btnSend;
     public TextArea areaChat;
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
     private Client client;
     private Chat chat = new Chat(areaChat);
 
     public void login(MouseEvent mouseEvent){
         client = new Login().login(paneLogin, paneChat, txtUsername);
+<<<<<<< Updated upstream
         chat.start();
     }
 
     public void sendMessage(){
         String message = client.sendMessage(txtInput, areaChat);
         areaChat.appendText(message + "\n");
+=======
+        new Chat(areaChat, client.canalentrada).start();
+    }
+
+    public void sendMessage(){
+        client.sendMessage(txtInput);
+>>>>>>> Stashed changes
         System.out.println(client.getUsername());
+
 
     }
 }
